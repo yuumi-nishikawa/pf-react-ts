@@ -1,0 +1,24 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65px;
+  box-shadow: 2px 0 6px 0 #0000001A;
+  margin-top: 10px;
+  bottom: 0;
+  position:absolute ;
+  width: 100%;
+
+}
+.logOut {
+  font-size: 16px;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+}
+.logOut:hover {
+  opacity: 0.5;
+}

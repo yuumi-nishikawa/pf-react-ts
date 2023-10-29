@@ -1,0 +1,44 @@
+
+.boxId {
+  display: flex;
+  justify-content: space-between;
+}
+.buttonId {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 101px;
+  height: 32px;
+  background-color: #bc89f3;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #FFFFFF;
+  margin-left: 32px;
+  cursor: pointer;
+}
+.titles {
+  font-size: 20px;
+}
+.formBox {
+  min-height: 100px;
+  border: 1px solid #CDCDCD;
+  border-radius: 4px;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.formBox:focus {
+  outline: none;
+}
+.formBox::placeholder {
+  font-size: 0.875rem;
+  color: #CDCDCD;
+}
+.formBox:hover {
+  border: 1px solid #8c8c8c;
+}
+.formBox:active {
+  border: 1px solid #8c8c8c;
+}
+.formBox:focus {
+  border: 1px solid #8c8c8c;
+}

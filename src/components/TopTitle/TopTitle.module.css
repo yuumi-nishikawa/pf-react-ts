@@ -1,0 +1,14 @@
+.topTitle{
+  font-size: 24px;
+  margin: 0 auto 60px;
+  display: flex;
+  align-items: center;
+}
+.topTitle::before {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 24px;
+  background-color: #bc89f3;
+  margin-right: 8px;
+}

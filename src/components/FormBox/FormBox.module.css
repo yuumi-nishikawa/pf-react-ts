@@ -1,0 +1,24 @@
+.formBox {
+  height: 32px;
+  border: 1px solid #CDCDCD;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.formBox:focus {
+  outline: none;
+}
+.formBox::placeholder {
+  font-size: 0.875rem;
+  color: #CDCDCD;
+}
+.formBox:hover {
+  border: 1px solid #8c8c8c;
+}
+.formBox:active {
+  border: 1px solid #8c8c8c;
+}
+.formBox:focus {
+  border: 1px solid #8c8c8c;
+}
