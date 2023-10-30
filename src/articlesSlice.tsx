@@ -25,13 +25,12 @@ export const articlesSlice = createSlice({
   },
 
   extraReducers: (builder) => {
-    builder
-      .addCase(fetchArticles.fulfilled, (state, action) => {
-        state.posts = action.payload;
-      })
-      .addCase(fetchById.fulfilled, (state, action) => {
-        state.postDetail = action.payload;
-      });
+    builder.addCase(fetchArticles.fulfilled, (state, action) => {
+      state.posts = action.payload;
+    });
+    builder.addCase(fetchById.fulfilled, (state, action) => {
+      state.postDetail = action.payload;
+    });
   },
 });
 
