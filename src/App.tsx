@@ -1,3 +1,4 @@
+import React from 'react';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import Top from './pages/Top';
 import Articles from './pages/Articles';
@@ -10,7 +11,9 @@ import Style from './App.module.css';
 import MobileMenu from './components/MobileMenu';
 
 
-const App = () => {
+
+
+const App: React.FC = () => {
 
   return (
     <Router>

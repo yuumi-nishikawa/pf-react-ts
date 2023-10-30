@@ -1,16 +1,20 @@
 // ユーザ情報を含む user を共有することが可能となる
-import { createContext, useState, useContext, useEffect } from 'react';
+import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react';
 import { auth } from '../api';
 import { Navigate } from 'react-router-dom';
 
-const AuthContext = createContext();
+interface AuthProviderProps {
+  children: React.ReactNode;
+}
+
+const AuthContext = createContext<any>(null);
 
 export const useAuthContext = () => {
   return useContext(AuthContext);
 }
 
-export const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
+export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
+  const [user, setUser] = useState<any>(null);
   const value = { user };
 
   useEffect(() => {
