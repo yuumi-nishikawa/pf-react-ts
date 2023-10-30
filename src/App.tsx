@@ -10,9 +10,6 @@ import { AuthProvider } from './context/AuthContext';
 import Style from './App.module.css';
 import MobileMenu from './components/MobileMenu';
 
-
-
-
 const App: React.FC = () => {
 
   return (

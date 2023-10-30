@@ -1,7 +1,13 @@
 import React from 'react';
 import style from './TopTitle.module.css';
 
-const TopTitle = ({ title, children, ...rest }) => {
+interface Props {
+  title: string;
+  children?: React.ReactNode;
+}
+
+
+const TopTitle: React.FC<Props> = ({ title, children, ...rest }) => {
   return (
     <h2 className={style.topTitle} {...rest}>
       {title}

@@ -42,7 +42,7 @@ const fetchArticlesWithDocumentID = async () => {
   }
 };
 
-const fetchArticlesById = async (id) => {
+const fetchArticlesById = async (id: string) => {
 
   const q = await getDocs(query(articlesRef, where(documentId(), "==", id)));
 

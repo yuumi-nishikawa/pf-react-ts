@@ -7,21 +7,25 @@ import { fetchArticles } from '../../articlesSlice';
 import Footer from '../../components/Footer';
 import TopTitle from '../../components/TopTitle';
 
+interface RootState {
+  id: string;
+  postName: string;
+  postDetail: string;
+}
 
-const Articles = () => {
+
+const Articles: React.FC = () => {
   const dispatch = useDispatch();
 
-  const posts = useSelector((state) => state.articles.posts);
-
+  const posts = useSelector((state: RootState[]) => state);
   useEffect(() => {
     dispatch(fetchArticles());
   }, [dispatch]);
 
-
 return (
   <div>
     <div className={Style.titleContainer}>
-      <TopTitle>
+      <TopTitle title="Articles">
         {posts.length === 0 ? 'まだ記録がありません' : '今までの記録'}
       </TopTitle>
     </div>

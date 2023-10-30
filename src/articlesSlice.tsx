@@ -1,13 +1,14 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import {fetchArticlesWithDocumentID,fetchArticlesById}  from './api';
 
+
 export const fetchArticles = createAsyncThunk('articles/fetchArticles', async () => {
 
   const articles = await fetchArticlesWithDocumentID();
   return articles;
 });
 
-export const fetchById = createAsyncThunk('articles/fetchArticlesById', async (id) => {
+export const fetchById = createAsyncThunk('articles/fetchArticlesById', async (id: string) => {
   const article = await fetchArticlesById(id);
   return article;
 });
@@ -25,10 +26,11 @@ export const articlesSlice = createSlice({
   },
 
   extraReducers: {
-    [fetchArticles.fulfilled]: (state, action) => {
+    [String(fetchArticles.fulfilled)]: (state, action) => {
+
       state.posts = action.payload;
     },
-    [fetchById.fulfilled]: (state, action) => {
+    [String(fetchById.fulfilled)]: (state, action) => {
       state.postDetail = action.payload;
     }
   },
