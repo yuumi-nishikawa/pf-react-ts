@@ -7,20 +7,24 @@ import { fetchArticles } from '../../articlesSlice';
 import Footer from '../../components/Footer';
 import TopTitle from '../../components/TopTitle';
 
-interface RootState {
+import { ThunkDispatch } from 'redux-thunk';
+import { AnyAction } from 'redux';
+
+interface Props {
   id: string;
   postName: string;
   postDetail: string;
 }
 
-
 const Articles: React.FC = () => {
-  const dispatch = useDispatch();
+  const dispatch: ThunkDispatch<Props[], void, AnyAction> = useDispatch();
 
-  const posts = useSelector((state: RootState[]) => state);
+  const posts = useSelector((state: Props[]) => state);
+
   useEffect(() => {
     dispatch(fetchArticles());
   }, [dispatch]);
+
 
 return (
   <div>
